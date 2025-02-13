@@ -1,7 +1,16 @@
 <div class="container">
-    <div class="py-3">
-      <h4 class="text-white">Hotels Search</h4>
+    <div class="py-3 justify-content-between align-items-center">
+      <h4 class="text-white" *ngIf="!isAvailableRoomPage">Hotels Search</h4>
+      <div *ngIf="isAvailableRoomPage" class="text-white w-100 text-center position-relative">
+        <h4 class="d-inline">{{ location }}</h4>
+        <i class="fa fa-edit text-white cursor-pointer position-absolute top-0 end-0 me-3" (click)="goBackToSearch()"></i>
+        <p>{{ checkInDate | date:'longDate' }} - {{ checkOutDate | date:'longDate' }}  | {{ rooms }} Room(s) | {{ totalGuests }} Guest(s)</p>
+      </div>
     </div>
 </div>
-
-<app-hotel-search></app-hotel-search>
+<ng-container *ngIf="!isAvailableRoomPage">
+  <div class="home">
+    <app-hotel-search (search)="updateSearchDetails($event)"></app-hotel-search>
+  </div>
+</ng-container>
+<router-outlet></router-outlet>

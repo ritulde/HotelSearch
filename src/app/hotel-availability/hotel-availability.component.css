@@ -1,0 +1,33 @@
+.image-height {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+  }
+  
+  .fa-star {
+    color: gold;
+  }
+  
+  .fa-star-o {
+    color: lightgray;
+  }
+  
+  .star-rating {
+    display: flex;
+    align-items: center;
+  }
+  .address-icon {
+    margin-right: 7px;
+}
+.address{
+    margin-top: 10px;
+}
+
+.rating {
+  padding: 5px;
+  border-radius: 5px;
+  display: inline-block;
+}
+.text-success {
+  color: #28a745;
+}

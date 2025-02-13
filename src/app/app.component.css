@@ -1,6 +1,15 @@
-.container{
+.container {
     background-color: #344CB7;
-    height: 60px;
+    height: 75px;
     align-content: center;
     text-align: center; 
+}
+
+.fa-edit {
+    cursor: pointer;
+    font-size: 1.5rem;
+    position: absolute !important;
+    top: 30% !important;
+    right: 10px !important;
+    transform: translateY(-50%);
 }
